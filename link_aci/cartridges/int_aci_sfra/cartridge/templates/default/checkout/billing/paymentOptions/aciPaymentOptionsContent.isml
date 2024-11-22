@@ -1,0 +1,28 @@
+
+<!-- tab active will keep For to send the selected payment method in the submit payment ajax-->
+<div class="tab-pane active credit-card-content"
+	id="credit-card-content" role="tabpanel">
+	<fieldset class="payment-form-fields">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="row">
+					<isloop
+						items="${pdict.order.billing.payment.applicablePaymentMethods}"
+						var="paymentOption">
+					<div class="col-sm-6">
+						<input type="radio" class="form-payment-buttons"
+							name="${pdict.forms.billingForm.paymentMethod.htmlName}"
+							value="${paymentOption.ID}"
+						<isif condition=${paymentOption.ID=== 'CREDIT_CARD'}>checked="checked"</isif>
+						> <label for="${paymentOption.name}" class="radio-button-label"><isprint
+								value="${paymentOption.name}" encoding="on" /> </label>
+					</div>
+					</isloop>
+				</div>
+			</div>
+		</div>
+		<br />
+		<isset name="creditFields"
+			value="${pdict.forms.billingForm.creditCardFields}" scope="page" />
+	</fieldset>
+</div>

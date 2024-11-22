@@ -1,0 +1,161 @@
+// variables
+$button-color: #00a1e0;
+
+.aci-checkout {
+    &.hide-aci-widget {
+        display: none;
+    }
+
+    .payment-summary {
+        padding: 1em;
+    }
+
+    .returnurl {
+        text-align: center;
+
+        img {
+            margin-bottom: 1em;
+        }
+
+        .back-to-cart {
+            margin-bottom: 0.833em;
+            display: block;
+            color: #0070d2;
+        }
+    }
+}
+
+#aci-overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+
+    .overlay-text {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        padding: 3.333em 2.5em;
+        background: #fff;
+        color: #000;
+
+        p {
+            font-size: 1.167em;
+            letter-spacing: 0.042em;
+        }
+
+        a {
+            margin-top: 1.333em;
+        }
+
+        h1 {
+            text-transform: capitalize;
+        }
+    }
+}
+
+/*************************** Widget CSS Overides ***********************/
+div.wpwl-wrapper,
+div.wpwl-label,
+div.wpwl-sup-wrapper {
+    width: 100%;
+}
+
+div.wpwl-group-expiry,
+div.wpwl-group-brand {
+    width: 30%;
+    float: left;
+}
+
+div.wpwl-group-cvv {
+    width: 68%;
+    float: left;
+    margin-left: 2%;
+}
+
+div.wpwl-group-cardHolder,
+div.wpwl-sup-wrapper-street1,
+div.wpwl-group-expiry {
+    clear: both;
+}
+
+div.wpwl-sup-wrapper-street1 {
+    padding-top: 0.083em;
+}
+
+div.wpwl-wrapper-brand {
+    width: auto;
+}
+
+div.wpwl-sup-wrapper-state,
+div.wpwl-sup-wrapper-city {
+    width: 32%;
+    float: left;
+    margin-right: 2%;
+}
+
+div.wpwl-sup-wrapper-postcode {
+    width: 32%;
+    float: left;
+}
+
+div.wpwl-sup-wrapper-country {
+    width: 66%;
+}
+
+div.wpwl-wrapper-brand,
+div.wpwl-label-brand {
+    display: none;
+}
+
+div.wpwl-group-cardNumber {
+    width: 70%;
+    float: left;
+    font-size: 1.667em;
+}
+
+div.wpwl-group-brand {
+    width: 30%;
+    float: left;
+    margin-top: 2.333em;
+}
+
+div.wpwl-brand-card {
+    width: 6.667em;
+}
+
+.wpwl-group.wpwl-group-brand {
+    position: relative;
+    top: 1.083em;
+    left: 0.833em;
+}
+
+.wpwl-form-card {
+    border-radius: 0;
+    min-width: 60%;
+}
+
+.wpwl-form-virtualAccount-PAYPAL .wpwl-group.wpwl-group-button {
+    text-align: center;
+}
+
+.wpwl-button-pay,
+.wpwl-button-pay[disabled] {
+    background-color: $button-color;
+    border-color: $button-color;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: $button-color;
+        border-color: $button-color;
+    }
+}

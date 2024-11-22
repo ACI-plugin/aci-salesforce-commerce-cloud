@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.demandware.com/xml/impex/library/2006-10-31" library-id="RefArchSharedLibrary">
+    <content content-id="ACI-checkout-widget-footer">
+        <display-name xml:lang="x-default">ACI Checkout Widget Footer</display-name>
+        <online-flag>false</online-flag>
+        <searchable-flag>false</searchable-flag>
+        <page-attributes/>
+    </content>
+</library>

@@ -1,0 +1,63 @@
+  <isdecorate template="common/layout/aci">
+  	<isinclude template="/components/modules" sf-toolkit="off" />
+  	<!----------------------------------------------------------------------------------->
+  	<!-- Load Static Assets -->
+  	<!----------------------------------------------------------------------------------->
+  	<isscript>
+       var assets = require('*/cartridge/scripts/assets.js');
+       assets.addCss('/css/checkout/checkout.css');
+       assets.addCss('/css/aciwidget-style.css');
+       assets.addJs('/js/aciwidget.js');
+   </isscript>
+
+  	<isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
+  		<isinclude template="reporting/reportingUrls" />
+  	</isif>
+  	<div class="page aci-checkout ${pdict.async ? ' hide-aci-widget' : ''}">
+  		<header>
+  			<nav role="navigation">
+  				<div class="header container">
+  					<div class="col-12">
+  						<div class="navbar-header brand row">
+  							<a href="${pdict.backToCartUrl}"
+  								title="${Resource.msgf('global.homepage.tooltip', 'common', null, Resource.msg('global.storename', 'common', null), Resource.msg(
+             	'global.home', 'common', null))}">
+  								<img class="hidden-md-down" src="${URLUtils.staticURL('/images/logo.svg')}"
+  									alt="${Resource.msg('global.storename', 'common', null)}" />
+  								<img class="d-lg-none" src="${URLUtils.staticURL('/images/logo-small.svg')}"
+  									alt="${Resource.msg('global.storename', 'common', null)}" />
+  							</a>
+  						</div>
+  					</div>
+  				</div>
+  			</nav>
+  		</header>
+  		<h1 class="page-title">
+  			${Resource.msg('title.checkout', 'checkout', null)}
+  		</h1>
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-sm-7">
+  					<div class="card payment-summary">
+  						<isinclude template="aci/util/widget" />
+  						<div class="aci-widget-footer returnurl">
+  							<iscontentasset aid="ACI-checkout-widget-footer" />
+  							<div><a class="back-to-cart" href="${pdict.backToCartUrl}">Return to site </a></div>
+  						</div>
+  					</div>
+  				</div>
+
+  				<div class="col-sm-5">
+  					<div class="card">
+  						<div class="card-header">
+  							<h4>${Resource.msg('heading.order.summary', 'checkout', null)}</h4>
+  						</div>
+  						<div class="card-body order-total-summary">
+  							<isinclude template="checkout/orderTotalSummary" />
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </isdecorate>

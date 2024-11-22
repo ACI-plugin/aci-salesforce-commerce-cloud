@@ -1,0 +1,6 @@
+<!--- TEMPLATENAME: errormessages.isml --->
+<isif condition="${pdict.ACIErrorCode}">
+    <div class="alert alert-danger error-message" role="alert">
+        <div class="error-message-text"><isprint value="${Resource.msg(pdict.ACIErrorCode,'aci','aci.error.general')}" /></div>
+    </div>
+</isif>

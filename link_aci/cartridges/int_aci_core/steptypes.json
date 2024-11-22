@@ -1,0 +1,32 @@
+{
+    "step-types": {
+      "script-module-step": [{
+          "@type-id": "custom.CheckTransactionStatus",
+          "@supports-parallel-execution": "false",
+          "@supports-site-context": "true",
+          "@supports-organization-context": "false",
+          "description": "Checks status of pending payments in ACI and updates order status",
+          "module": "int_aci_core/cartridge/scripts/job/checkTransactionStatus.js",
+          "function": "CheckPendingTransactions",
+          "transactional": "false",
+          "timeout-in-seconds": "3600",
+          "parameters": {},
+          "status-codes": {
+            "status": [{
+                "@code": "ERROR",
+                "description": "Used when the step failed with an error."
+              },
+              {
+                "@code": "FINISHED",
+                "description": "Used when the step finished successfully."
+              },
+              {
+                "@code": "FINISHED_WITH_WARNINGS",
+                "description": "Used when the step finished with warnings."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }

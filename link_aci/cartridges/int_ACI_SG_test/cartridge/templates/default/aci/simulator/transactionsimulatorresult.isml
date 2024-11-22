@@ -1,0 +1,29 @@
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+
+
+
+<body>    
+    <div id="main" role="main" class="container mt-5 pb-5">
+
+        <h2>Transaction Result</h2>
+        
+        <div>Transaction Type : ${pdict.transactionType}</div>
+
+		<div>Transaction Amount : ${pdict.amount}</div>
+
+		<div>Order Number : ${pdict.orderNumber}</div>
+
+		<div>Transaction Result : ${JSON.stringify(pdict.response)}</div>
+		
+		<div>
+			<a href="${URLUtils.https('ACITransactionSimulator-Test')}">
+				Back
+			</a>
+		</div>
+    </div>
+</body>

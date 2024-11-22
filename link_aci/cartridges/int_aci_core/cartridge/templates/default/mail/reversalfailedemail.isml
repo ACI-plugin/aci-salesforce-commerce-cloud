@@ -1,0 +1,27 @@
+<iscontent type="text/html" charset="UTF-8" compact="true" />
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+    <title>${Resource.msg('aci.order.reversal.error.subject', 'aci', null)}</title>
+</head>
+
+<body>
+    <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="center" style="background:#e0e0e0;padding:50px 0;">
+                <center>
+                    <table style="background:#ffffff;border:1px solid #999999;width:680px;">
+                        <tr>
+                            <td style="font-size:12px;font-family:arial;padding:20px 10px;vertical-align:top;">
+                                <p>${Resource.msgf('order.reversal.error.message', 'aci', null, pdict.orderNo)}</p>
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

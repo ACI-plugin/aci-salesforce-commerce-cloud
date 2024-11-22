@@ -1,0 +1,50 @@
+<iscontent type="text/html" charset="UTF-8" compact="true"/>
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+
+
+<body>    
+    <div id="main">
+    
+        <h2>Transaction Simulator Form</h2>
+
+        <form action="${pdict.actionUrl}" class="simulateTransaction" method="POST" name="simulateTransaction" id="simulateTransaction">
+
+            <fieldset>
+				<br/>
+				<div class="form-group">
+				      <label for="ordernumber">Select Transaction Type</label>
+				      <select name="transactionType"> 
+				      	<option value="Capture" >Capture</option> 
+				      	<option value="Reversal" >Reversal</option> 
+				      	<option value="Refund" >Refund</option>
+				      </select>
+				</div>
+				<br/>
+				<div class="form-group">
+				    <label for="ordernumber">Enter a valid order number</label>
+				    <input type="text" class="form-control" id="ordernumber" name="ordernumber"
+				        placeholder="Enter a valid order number">
+				</div>
+				<br/>
+				<div class="form-group">
+				    <label for="amount">Enter Amount (applicable for capture / refund only)</label>
+				    <input type="text" class="form-control number" id="amount" name="amount"
+				        placeholder="Enter Amount">
+				</div>
+				<br/>
+                <div class="form-group">
+                    <button type="submit" value="${Resource.msg('global.apply', 'locale', null)}" name="send"
+                        id="send" class="btn btn-primary mr-2">
+                        Send
+                    </button>
+                </div>
+                <br/>
+            </fieldset>
+        </form>
+
+	</div>
+</body>

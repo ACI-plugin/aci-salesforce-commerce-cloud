@@ -1,0 +1,6 @@
+cartridges/int_aci_controllers
+cartridges/int_aci_core
+cartridges/int_aci_sfra/cartridge/static/
+coverage/
+doc/
+bin/
