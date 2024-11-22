@@ -1,0 +1,6 @@
+<body onload="document.acipreconfirm.submit()">
+    <form name="acipreconfirm" action="${pdict.confirmationUrl}" method="POST">
+        <input type="hidden" name="orderID" value="${pdict.orderID}" />
+        <input type="hidden" name="orderToken" value="${pdict.token}" />
+    </form>
+</body>

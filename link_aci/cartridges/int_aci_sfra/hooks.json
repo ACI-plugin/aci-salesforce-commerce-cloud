@@ -1,0 +1,12 @@
+{
+	"hooks": [
+		{
+			"name": "app.payment.processor.aci",
+			"script": "./cartridge/scripts/hooks/payment/processor/aci"
+		},
+        {
+            "name": "app.payment.form.processor.aci",
+            "script": "./cartridge/scripts/hooks/payment/processor/aci_form_processor"
+        }
+	]
+}

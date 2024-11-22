@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jobs xmlns="http://www.demandware.com/xml/impex/jobs/2015-07-01">
+    <job job-id="ACI Pending Transactions" priority="0">
+        <description>The job will  periodically check the status of all pending transactions in ACI and update the order export status to “Ready for export”</description>
+        <parameters/>
+        <flow>
+            <context site-id="RefArch"/>
+            <step step-id="CheckTransactionStatus" type="custom.CheckTransactionStatus" enforce-restart="false">
+                <description/>
+                <parameters/>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-recurring enabled="true">
+                <recurrence>
+                    <date-from>2019-03-20Z</date-from>
+                    <start-time>13:47:03.000Z</start-time>
+                    <interval>30m</interval>
+                    <day-of-week/>
+                </recurrence>
+            </run-recurring>
+        </triggers>
+    </job>
+</jobs>

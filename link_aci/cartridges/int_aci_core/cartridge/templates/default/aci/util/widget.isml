@@ -1,0 +1,11 @@
+<script src="${pdict.widgetUrl}/paymentWidgets.js?checkoutId=${pdict.aciCheckoutID}"></script>
+<form action="${pdict.shopperReturnURL}" class="paymentWidgets" data-brands="${pdict.dataBrands}"></form>
+<span id="aci-widget-options" data-widget-options="${pdict.widgetOptions}"></span>
+<div id="aci-overlay">
+    <div class="overlay-text">
+        <h1>${Resource.msg('aci.timout.alert.head', 'aci', null)}</h1>
+        <p class="error-msg session">${Resource.msg('aci.widget.session.expired.message', 'aci', null)}</p>
+        <p class="error-msg general">${Resource.msg('aci.widget.general.error.message', 'aci', null)}</p>
+        <a class="button" href="${pdict.sessionErrorUrl}">${Resource.msg('aci.button.continue', 'aci', null)}</a>
+    </div>
+</div>

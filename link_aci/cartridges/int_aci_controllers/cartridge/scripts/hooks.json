@@ -1,0 +1,8 @@
+{
+	"hooks": [
+		{
+			"name": "app.payment.processor.ACI",
+			"script": "./payment/processor/ACI"
+		}
+	]
+}

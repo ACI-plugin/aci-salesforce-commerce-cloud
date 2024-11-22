@@ -1,0 +1,16 @@
+<!--- TEMPLATENAME: submitpayment.isml --->
+<head>
+</head>
+<body>
+	<div id="wrapper" style="display:none;">
+		<form id="payNow" action="${pdict.widgetURL}" method="POST" > 
+			<input type="submit" value="Pay now" class="summaryForm"/> 
+		</form>
+	</div>
+	<script >
+		function formAutoSubmit () {
+			document.getElementById("payNow").submit();
+		}
+		window.onload = formAutoSubmit;
+	</script>
+</body>

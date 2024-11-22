@@ -1,0 +1,6 @@
+
+<isloop items="${pdict.order.billing.payment.applicablePaymentMethods}" var="paymentOption">
+    <isif condition="${paymentOption.ID === 'CREDIT_CARD' && !dw.system.Site.getCurrent().getCustomPreferenceValue('ACI_ENABLED')}">
+        <isinclude template="checkout/billing/paymentOptions/creditCardTab" />
+    </isif>
+</isloop>
